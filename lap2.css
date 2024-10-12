@@ -1,0 +1,523 @@
+
+/* Đặt màu chữ mặc định cho toàn bộ body */
+body {
+    color: #fff;
+    /* Màu chữ trắng */
+    font-family: 'Roboto', sans-serif;
+    /* Phông chữ mặc định */
+}
+
+/* Cấu hình cho phần header */
+header {
+    background-color: #000;
+    /* Nền màu đen */
+    color: #fff;
+    /* Màu chữ trắng */
+    padding: 10px 0;
+    /* Khoảng cách trên và dưới */
+}
+
+/* Phần đầu trang */
+.header-top {
+    display: flex;
+    /* Sử dụng flexbox để căn chỉnh */
+    justify-content: space-between;
+    /* Khoảng cách giữa các thành phần */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    padding: 10px 20px;
+    /* Khoảng cách cho header */
+}
+
+.left-content span {
+    margin-right: 15px;
+    /* Khoảng cách giữa các thông tin liên lạc */
+}
+
+/* Phần bên phải của header */
+.right-content {
+    display: flex;
+    /* Sử dụng flexbox */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+}
+
+.right-content .logo-right {
+    font-size: 24px;
+    /* Kích thước biểu tượng logo */
+    margin-right: 10px;
+    /* Khoảng cách giữa logo và liên kết đăng nhập */
+}
+
+a {
+    color: #fff;
+    /* Màu chữ cho liên kết */
+    text-decoration: none;
+    /* Loại bỏ gạch chân */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Gạch chân khi hover */
+}
+
+/* Cấu hình cho phần header dưới */
+.header-bottom {
+    display: flex;
+    /* Sử dụng flexbox */
+    justify-content: space-between;
+    /* Khoảng cách giữa các thành phần */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    padding: 10px 20px;
+    /* Khoảng cách cho header dưới */
+    background-color: #fff;
+    /* Nền trắng */
+}
+
+/* Kích thước logo */
+.logo img {
+    height: 80px;
+    /* Kích thước logo */
+}
+
+/* Cấu hình menu */
+.menu {
+    display: flex;
+    /* Sử dụng flexbox cho menu */
+    justify-content: center;
+    /* Căn giữa các mục menu */
+    flex-grow: 1;
+    /* Chiếm hết không gian có sẵn */
+}
+
+.menu a {
+    color: black;
+    /* Màu chữ cho mục menu */
+    text-decoration: none;
+    /* Loại bỏ gạch chân */
+    margin: 0 15px;
+    /* Khoảng cách giữa các mục menu */
+    font-size: 16px;
+    /* Kích thước chữ cho menu */
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    /* Gạch chân khi hover */
+}
+
+/* Cấu hình khối tìm kiếm và giỏ hàng */
+.search-cart {
+    display: flex;
+    /* Sử dụng flexbox */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+}
+
+.search-box {
+    display: flex;
+    /* Sử dụng flexbox cho ô tìm kiếm */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    background-color: #fff;
+    /* Nền trắng cho ô tìm kiếm */
+    border-radius: 5px;
+    /* Bo cong viền */
+    padding: 5px;
+    /* Khoảng cách trong ô tìm kiếm */
+}
+
+.search-box input {
+    border: 1px solid black;
+    /* Viền đen */
+    border-radius: 15px;
+    /* Bo cong viền */
+    outline: none;
+    /* Loại bỏ viền mặc định */
+    padding: 5px;
+    /* Khoảng cách trong ô tìm kiếm */
+}
+
+.search-box input:focus {
+    outline: 1px solid black;
+    /* Viền đen khi ô tìm kiếm được chọn */
+    border-radius: 15px;
+    /* Bo cong khi focus */
+}
+
+.search-box button {
+    background-color: transparent;
+    /* Nền trong suốt cho nút */
+    border: none;
+    /* Không viền cho nút */
+    cursor: pointer;
+    /* Đổi con trỏ khi hover */
+    padding-left: 10px;
+    /* Khoảng cách bên trái cho nút */
+}
+
+.cart-icon {
+    color: #000;
+    /* Màu biểu tượng giỏ hàng */
+    font-size: 24px;
+    /* Kích thước biểu tượng giỏ hàng */
+    margin-left: 15px;
+    /* Khoảng cách giữa ô tìm kiếm và giỏ hàng */
+}
+
+/* Cấu hình cho phần banner */
+.banner {
+    position: relative;
+    /* Thiết lập vị trí cho div chứa hình ảnh */
+    overflow: hidden;
+    /* Ẩn những phần thừa nếu có */
+}
+
+/* Cấu hình cho văn bản trên banner */
+.banner-text {
+    position: absolute;
+    /* Đặt vị trí tuyệt đối cho văn bản */
+    color: white;
+    /* Màu chữ */
+    text-align: left;
+    /* Căn trái chữ */
+    z-index: 1;
+    /* Đảm bảo chữ nằm trên hình ảnh */
+    top: 50%;
+    /* Căn giữa theo chiều dọc */
+    left: 10%;
+    /* Căn trái theo chiều ngang */
+    transform: translateY(-50%);
+    /* Điều chỉnh vị trí văn bản */
+}
+
+/* Cấu hình cho các tiêu đề trong văn bản banner */
+.banner-text h2,
+.banner-text h3,
+.banner-text h4 {
+    margin: 0;
+    /* Loại bỏ khoảng cách mặc định */
+    padding: 5px;
+    /* Khoảng cách giữa các dòng */
+    font-family: 'Roboto', sans-serif;
+    /* Áp dụng phông chữ cho văn bản trên banner */
+}
+
+.banner-text h2 {
+    font-size: 28px;
+    /* Kích thước chữ cho tiêu đề */
+}
+
+.banner-text h3 {
+    font-size: 24px;
+    /* Kích thước chữ cho tiêu đề phụ */
+}
+
+.banner-text h4 {
+    font-size: 20px;
+    /* Kích thước chữ cho mô tả */
+}
+
+/* Cấu hình cho phần tiêu đề doanh mục */
+.category-title {
+    text-align: center;
+    /* Căn giữa nội dung */
+    margin: 20px 0;
+    /* Khoảng cách trên và dưới tiêu đề */
+}
+
+.category-title h2 {
+    font-family: 'Roboto', sans-serif;
+    /* Phông chữ cho tiêu đề doanh mục */
+    font-size: 24px;
+    /* Kích thước chữ cho tiêu đề doanh mục */
+    color: #efd959;
+    /* Màu chữ cho tiêu đề doanh mục */
+}
+
+/* Cấu hình cho phần chứa các hình ảnh danh mục */
+.category-images {
+    display: flex;
+    /* Sử dụng flexbox để căn chỉnh */
+    flex-wrap: wrap;
+    /* Cho phép hình ảnh xuống dòng nếu không đủ chỗ */
+    justify-content: center;
+    /* Căn giữa các hình ảnh */
+    margin-top: 20px;
+    /* Khoảng cách trên cho phần hình ảnh */
+}
+
+/* Cấu hình cho từng hình ảnh trong danh mục */
+.category-image {
+    flex: 0 0 45%;
+    /* Chiếm 45% chiều rộng của container, cho 2 hình trên một hàng */
+    margin: 10px;
+    /* Khoảng cách giữa các hình ảnh */
+    text-align: center;
+    /* Căn giữa nội dung trong từng khối hình ảnh */
+}
+
+.category-image img {
+    width: 100%;
+    /* Đặt chiều rộng hình ảnh bằng 100% khối chứa */
+    height: 200px;
+    /* Đặt chiều cao cố định cho tất cả hình ảnh */
+    object-fit: cover;
+    /* Đảm bảo hình ảnh được cắt và giữ tỷ lệ khung hình */
+    border-radius: 8px;
+    /* Bo cong viền cho hình ảnh */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Thêm bóng cho hình ảnh */
+}
+
+hr {
+    border: none;
+    /* Loại bỏ viền mặc định */
+    height: 2px;
+    /* Đặt độ dày cho đường kẻ */
+    background-color: #000000;
+    /* Màu sắc cho đường kẻ */
+    margin: 20px auto;
+    /* Căn giữa và thêm khoảng cách trên và dưới */
+    width: 80%;
+    /* Đặt chiều rộng cho đường kẻ */
+}
+
+.additional-images {
+    text-align: center;
+    /* Căn giữa nội dung */
+    margin: 20px 0;
+    /* Khoảng cách trên và dưới khối chứa hình ảnh */
+}
+
+.image-list {
+    list-style-type: none;
+    /* Loại bỏ dấu đầu dòng của danh sách */
+    padding: 0;
+    /* Xóa khoảng cách padding mặc định */
+    display: flex;
+    /* Sử dụng flexbox để căn giữa */
+    justify-content: space-between;
+    /* Chia đều không gian giữa các mục */
+}
+
+.image-item {
+    flex: 1;
+    /* Tất cả các mục đều có chiều rộng bằng nhau */
+    margin: 0 5px;
+    /* Khoảng cách giữa các hình ảnh */
+}
+
+.image-item img {
+    width: 100%;
+    /* Đặt chiều rộng hình ảnh bằng 100% khối chứa */
+    height: auto;
+    /* Đảm bảo chiều cao tự động điều chỉnh theo chiều rộng */
+    border-radius: 15px;
+    /* Bo góc hình ảnh */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Thêm bóng cho hình ảnh */
+}
+
+.image-info {
+    margin-top: 10px;
+    /* Khoảng cách giữa hình ảnh và thông tin */
+    font-size: 14px;
+    /* Kích thước chữ cho thông tin */
+    color: #555;
+    /* Màu chữ cho thông tin */
+    text-align: left;
+    /* Căn trái thông tin */
+}
+
+.info-container {
+    display: flex;
+    /* Căn các phần thành hàng ngang */
+    justify-content: space-between;
+    /* Chia đều khoảng cách giữa các phần */
+    margin: 20px 0;
+    /* Khoảng cách trên và dưới của container */
+    height: 100px;
+}
+
+.info-box {
+    background-color: #ffa500;
+    /* Màu nền cam */
+    border-radius: 10px;
+    /* Bo góc cho hộp */
+    padding: 15px;
+    /* Khoảng cách bên trong */
+    flex: 1;
+    /* Để các hộp có kích thước bằng nhau */
+    margin: 0 10px;
+    /* Khoảng cách giữa các hộp */
+    display: flex;
+    /* Dùng flex để căn icon và văn bản */
+    align-items: center;
+    /* Căn giữa icon và văn bản theo chiều dọc */
+}
+
+.info-box i {
+    font-size: 30px;
+    /* Kích thước icon */
+    margin-right: 70px;
+    /* Khoảng cách giữa icon và văn bản */
+    color: #fff;
+    /* Màu trắng cho icon */
+}
+
+.info-text {
+    font-size: 14px;
+    /* Kích thước chữ */
+    color: #fff;
+    /* Màu trắng cho văn bản */
+    text-align: left;
+    /* Căn trái văn bản */
+}
+
+.info-text strong {
+    font-size: 16px;
+    /* Kích thước chữ cho tiêu đề */
+}
+
+/* Cấu hình cho phần liên hệ */
+.contact-container {
+    display: flex;
+    width: 100%;
+    /* justify-content: space-between; */
+    /* align-items: flex-start; */
+    text-align: center;
+    margin: 30px ; /* Căn giữa container */
+    gap: 20px;
+    max-width: 100%; /* Giới hạn chiều rộng của container tổng */
+}
+
+
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 80%;
+    /* Giữ chiều rộng 80% để tạo không gian xung quanh */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 40%; /* Giảm chiều rộng tối đa */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+
+    display: flex;
+    flex-direction: column; /* Căn chỉnh các box theo chiều dọc */
+    align-items: center; /* Căn giữa các box */
+}
+
+.contact-form button {
+    width: 50%;
+    /* Chiều rộng của nút */
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    /* Kích thước nút */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px 0;
+    /* Căn giữa nút */
+}
+
+.contact-form button:hover {
+    background-color: #203484;
+}
+
+
+
+
+.contact-image {
+    flex: 1;
+    max-width: 40%; /* Giảm chiều rộng tối đa */
+    text-align: center;
+}
+
+.contact-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.footer {
+    display: flex; /* Sử dụng flexbox để tạo bố cục */
+    background-color: black; /* Nền đen */
+    color: white; /* Màu chữ trắng */
+    padding: 20px; /* Khoảng cách nội dung */
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1; /* Các phần sẽ chiếm đều không gian */
+    margin: 10px; /* Khoảng cách giữa các phần */
+}
+
+.footer-image {
+    width: 20%; /* Đặt chiều rộng của hình ảnh */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+}
+
+.footer-text {
+    text-align: center; /* Canh giữa văn bản */
+    font-weight: bold; /* Đậm chữ */
+    margin-top: 10px; /* Khoảng cách trên */
+}
+
+.support {
+    text-align: left; /* Canh giữa văn bản hỗ trợ */
+    margin-top: 20px; /* Khoảng cách trên */
+}
+
+.support-phone {
+    color: orange; /* Màu chữ số điện thoại */
+    font-weight: bold; /* Đậm chữ */
+}
+
+.social-icons {
+    display: flex; /* Sử dụng flexbox cho biểu tượng */
+    justify-content: center; /* Canh giữa các biểu tượng */
+    margin-top: 10px; /* Khoảng cách trên */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Khoảng cách giữa các biểu tượng */
+    color: white; /* Màu chữ trắng */
+}
+
+.link-list, .policy-list {
+    list-style-type: none; /* Loại bỏ dấu chấm trước danh sách */
+    padding: 0; /* Xóa padding */
+}
+
+.link-list li, .policy-list li {
+    margin: 10px 0; /* Khoảng cách giữa các mục */
+}
+
+.link-list li a, .policy-list li a {
+    color: white; /* Màu chữ trắng */
+    text-decoration: none; /* Bỏ gạch chân */
+}
